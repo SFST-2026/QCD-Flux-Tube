@@ -52,3 +52,10 @@ Lattice string-breaking determinations: Bali et al. (SESAM), Phys. Rev. D 71,
 penetration length: Cardoso, Cardoso, Bicudo, Phys. Rev. D 88, 054504 (2013).
 Gluonic excitations: Juge, Kuti, Morningstar, Phys. Rev. Lett. 90, 161601 (2003).
 GMOR constant: FLAG, Eur. Phys. J. C 82, 869 (2022).
+
+## Note on AI tools
+
+These scripts were generated with the assistance of AI tools (Anthropic Claude,
+OpenAI ChatGPT) under the direction of the author. The author specified the
+model, inputs and computations, and verified all numerical results. All physical
+assumptions and conclusions are the author's own.
