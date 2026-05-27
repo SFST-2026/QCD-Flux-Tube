@@ -11,7 +11,7 @@ the CURRENT quark mass through GMOR: m_q = m_pi^2/(2B).
   d_break     = 2 m_eff / sigma
 
 One-scale closure (c=pi) uses the relation sigma = pi/R0^2:
-  d_break(chiral) = 2 x01 R0 / pi = 1.53 * R0   (NO QCD input at all)
+  d_break(chiral) = 2 x01 R0 / pi = 1.53 * R0   (no additional fit beyond R0 and the stated c=pi closure)
 """
 import mpmath as mp
 mp.mp.dps = 25

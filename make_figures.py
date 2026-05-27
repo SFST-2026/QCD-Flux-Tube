@@ -1,3 +1,7 @@
+import matplotlib as mpl
+mpl.rcParams["pdf.fonttype"]=42
+mpl.rcParams["ps.fonttype"]=42
+mpl.rcParams["font.family"]="sans-serif"
 import numpy as np, matplotlib.pyplot as plt
 import matplotlib.patches as mp
 from scipy.special import jn_zeros
@@ -27,8 +31,7 @@ ax.set_xlabel(r'$m_\pi$  [MeV]'); ax.set_ylabel(r'$d_{\mathrm{break}}$  [fm]')
 ax.set_xlim(-15,760); ax.set_ylim(1.00,1.42)
 ax.legend(fontsize=8.2,loc='lower right',framealpha=.96,edgecolor='0.8')
 ax.grid(alpha=.22,lw=0.6)
-ax.set_title(r'String-breaking distance: bounded chiral limit',fontsize=11,pad=8)
-fig.tight_layout(); fig.savefig('/home/claude/fig_dbreak.pdf'); plt.close()
+fig.tight_layout(); fig.savefig('Fig2.pdf', bbox_inches='tight'); plt.close()
 
 # ============ FIG 2: cavity mode tower (the "pretty" schematic) ============
 fig,(axL,axR)=plt.subplots(1,2,figsize=(7.2,3.6),gridspec_kw={'width_ratios':[1,1.25]})
@@ -47,7 +50,6 @@ axL.plot(np.cos(theta),np.sin(theta),'k-',lw=1.6,zorder=4)
 axL.annotate(r'$R_0=0.81$ fm',(0,-1.32),ha='center',fontsize=10)
 axL.annotate('flux-tube\ncross-section',(0,0),ha='center',va='center',fontsize=8.5,color='#16407a')
 axL.set_xlim(-1.5,1.5); axL.set_ylim(-1.55,1.4); axL.set_aspect('equal'); axL.axis('off')
-axL.set_title('transverse cavity',fontsize=10)
 # right: energy-level diagram of x_{L,1}/R0
 levels=[('$\\Sigma$ ($x_{0,1}$)',x0,'#1f4e9c'),
         ('$\\Pi_u$ ($x_{1,1}$)',x1,'#27ae60'),
@@ -58,9 +60,7 @@ for name,xv,col in levels:
     axR.text(0.9,E,f'{name}: {E:.2f} GeV',va='center',fontsize=9,color=col)
 axR.set_ylim(0.4,1.45); axR.set_xlim(0,2.4)
 axR.set_ylabel('gluonic gap  [GeV]'); axR.set_xticks([])
-axR.set_title(r'cavity modes $x_{\Lambda,1}/R_0$',fontsize=10)
 axR.spines['top'].set_visible(False); axR.spines['right'].set_visible(False)
 axR.spines['bottom'].set_visible(False)
-fig.suptitle('One transverse scale fixes the gluonic-excitation tower',fontsize=10.5,y=1.02)
-fig.tight_layout(); fig.savefig('/home/claude/fig_cavity.pdf',bbox_inches='tight'); plt.close()
+fig.tight_layout(); fig.savefig('Fig1.pdf', bbox_inches='tight'); plt.close()
 print("both figures saved")
