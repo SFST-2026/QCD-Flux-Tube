@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Calc (b): parameter-free string-breaking distance curve d_break(m_pi).
+Calc (b): one-scale string-breaking distance curve d_break(m_pi).
 
 Model: a quark trapped in the flux tube has irreducible transverse
 zero-point mass k_perp = x_{0,1}/R0 (compact dimension confinement REPLACES the chiral
@@ -10,7 +10,7 @@ the CURRENT quark mass through GMOR: m_q = m_pi^2/(2B).
   m_eff(m_pi) = sqrt( (m_pi^2/2B)^2 + (x01/R0)^2 )
   d_break     = 2 m_eff / sigma
 
-Fully parameter-free closure uses the relation sigma = pi/R0^2:
+One-scale closure (c=pi) uses the relation sigma = pi/R0^2:
   d_break(chiral) = 2 x01 R0 / pi = 1.53 * R0   (NO QCD input at all)
 """
 import mpmath as mp
@@ -28,12 +28,12 @@ def d_break(m_pi_GeV, sigma_GeV2):
     return 2*m_eff/sigma_GeV2*hbar_c, m_eff, m_q  # fm, GeV, GeV
 
 print("="*70)
-print("Parameter-free string-breaking curve d_break(m_pi)")
+print("One-scale phenomenological string-breaking curve d_break(m_pi)")
 print(f"k_perp = x01/R0 = {mp.nstr(k_perp,5)} GeV (irreducible transverse mass)")
 sigma_model = mp.pi*invR0**2
 print(f"sigma(model=pi/R0^2) = {mp.nstr(sigma_model,5)} GeV^2 ; sigma(lattice)=0.19")
 dchiral_pf = 2*x01*R0/mp.pi
-print(f"FULLY PARAMETER-FREE: d_break(chiral)=2 x01 R0/pi = 1.53 R0 = {mp.nstr(dchiral_pf,5)} fm")
+print(f"CLOSED MODEL (c=pi): d_break(chiral)=2 x01 R0/pi = 1.53 R0 = {mp.nstr(dchiral_pf,5)} fm")
 print("="*70)
 print(f"{'m_pi[MeV]':>9} {'m_q[MeV]':>9} {'m_eff[GeV]':>11} {'d_break[fm] sig=pi/R0^2':>22} {'sig=0.19':>10}")
 for mpi in [0,135,160,195,280,420,640]:

@@ -44,7 +44,7 @@ for m_q in ['0.0','0.005','0.10','0.30']:        # massless, current, strange-is
         print(f"{m_q:>10} {sig:>12} {mp.nstr(meff,5):>11} {mp.nstr(d,5):>12} {mp.nstr(d/R0,4):>7}")
 print()
 print("Lattice string-breaking distance (light/strange quarks): 1.10-1.25 fm")
-print("=> transverse confinement to R0 REPRODUCES the lattice d_break ~1.2 fm.")
+print("=> transverse confinement to R0 gives a d_break compatible with lattice ~1.2 fm.")
 print()
 
 # Schwinger suppression below threshold (massless quark, lattice sigma)

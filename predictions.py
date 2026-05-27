@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 New falsifiable predictions from the single-scale flux-tube
-cavity model (transverse confinement radius R0) (R0 = 0.81 fm = bag/cavity radius, parameter-free radion-potential).
+cavity model (transverse confinement radius R0) (R0 = 0.81 fm = bag/cavity radius, radion-potential).
 Honest separation: PREDICTION (not yet pinned) vs POSTDICTION (matches known).
 """
 import mpmath as mp
@@ -21,7 +21,7 @@ print("P2/P3  GLUONIC EXCITATION GAPS  Delta_L = x_{L,1}/R0  (cavity/bag modes)"
 labels={0:'Sigma',1:'Pi_u ',2:'Delta',3:'Phi  '}
 for L in range(4):
     print(f"   {labels[L]} (L={L}):  x_{{{L},1}}/R0 = {mp.nstr(x[L]*invR0,5)} GeV")
-print(f"   RATIO Pi_u:Sigma-excitation = x11/x01 = {mp.nstr(x[1]/x[0],5)}  (parameter-free!)")
+print(f"   RATIO Pi_u:Sigma-excitation = x11/x01 = {mp.nstr(x[1]/x[0],5)}  (fixed by the single scale)")
 print(f"   measured JKM Pi_u-Sigma_g+ gap at r~0.5fm ~ 1.0 GeV ; x11/R0={mp.nstr(x[1]*invR0,4)} GeV")
 print("   -> RATIOS of gluonic gaps = ratios of Bessel zeros: clean shape test")
 print("="*70)
@@ -62,7 +62,7 @@ print("="*70)
 # screening (dual gluon) mass = first NON-axisymmetric cavity mode x_{1,1}/R0
 m_dual = x[1]*invR0
 lam    = R0/x[1]
-print("P1'  DUAL GLUON MASS / PENETRATION LENGTH (parameter-free)")
+print("P1'  DUAL GLUON MASS / PENETRATION LENGTH (single-scale)")
 print(f"   m_dual = x_{{1,1}}/R0 = {mp.nstr(m_dual,4)} GeV  vs Bicudo lattice 0.905(163) GeV  [WITHIN ERROR]")
 print(f"   lambda = R0/x_{{1,1}} = {mp.nstr(lam,4)} fm   vs measured penetration ~0.22 fm  [MATCH]")
 print()
