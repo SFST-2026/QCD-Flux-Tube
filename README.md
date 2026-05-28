@@ -57,7 +57,8 @@ GMOR constant: FLAG, Eur. Phys. J. C 82, 869 (2022).
 
 ## Note on AI tools
 
-These scripts were generated with the assistance of AI tools (Anthropic Claude,
-OpenAI ChatGPT) under the direction of the author. The author specified the
-model, inputs and computations, and verified all numerical results. All physical
+These scripts were generated with the assistance of an AI assistant (Anthropic
+Claude Opus 4.7) under the direction of the author; a second AI assistant (OpenAI ChatGPT 5.5)
+was used for proofreading of the manuscript only. The author specified the model,
+inputs and computations, and verified all numerical results. All physical
 assumptions and conclusions are the author's own.
