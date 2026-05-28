@@ -18,7 +18,9 @@ confinement observables.
 
 ## Scripts
 
-All scripts use `mpmath` at 40–60 digit precision.
+The scripts use `mpmath` for numerical evaluation (the core script `dbreak_curve.py`
+at 100-digit precision); the displayed digits were checked to be stable under
+increased precision.
 
 | Script | Computes |
 |---|---|
