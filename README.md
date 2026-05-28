@@ -31,8 +31,8 @@ increased precision.
 | `casimir_budget.py`      | honest budget of the O(1) tension coefficient |
 | `ir_coupling.py`         | infrared-coupling check for the tension coefficient |
 | `crossover.py`           | validity window of the cavity picture |
-| `make_figures.py`        | Figure 2 (d_break curve) and the gluonic tower |
-| `make_cavity_figure.py`  | Figure 1 (transverse cavity mode) |
+| `make_figures.py`        | reproduces manuscript Fig. 1 and Fig. 2 |
+| `make_cavity_figure.py`  | legacy/alternative cavity-figure script (superseded by `make_figures.py`) |
 
 ## Requirements
 
