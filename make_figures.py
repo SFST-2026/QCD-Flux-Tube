@@ -48,7 +48,7 @@ ax.set_xlabel(r'$m_\pi$  [MeV]'); ax.set_ylabel(r'$d_{\mathrm{break}}$  [fm]')
 ax.set_xlim(-15, 760); ax.set_ylim(1.00, 1.42)
 ax.legend(fontsize=7.6, loc='lower right', framealpha=.96, edgecolor='0.8')
 ax.grid(alpha=.22, lw=0.6)
-fig.tight_layout(); fig.savefig('Fig2.pdf', bbox_inches='tight'); plt.close()
+fig.tight_layout(); fig.savefig('Fig2.pdf'); plt.close()
 
 # ============ Fig1: cavity intensity (raster) + gluonic tower ============
 fig, (axL, axR) = plt.subplots(1, 2, figsize=(7.2, 3.6),
