@@ -76,7 +76,7 @@ for name, xv, col in levels:
     axR.text(0.9, E, f'{name}: {E:.2f} GeV', va='center', fontsize=9, color=col)
 axR.text(0.0, 1.40, '(b)', fontsize=11, fontweight='bold')
 axR.set_ylim(0.4, 1.45); axR.set_xlim(0, 2.4)
-axR.set_ylabel('gluonic gap  [GeV]'); axR.set_xticks([])
+axR.set_ylabel('transverse mode energy  [GeV]'); axR.set_xticks([])
 axR.spines['top'].set_visible(False); axR.spines['right'].set_visible(False)
 axR.spines['bottom'].set_visible(False)
 fig.tight_layout(); fig.savefig('Fig1.pdf', bbox_inches='tight'); plt.close()
