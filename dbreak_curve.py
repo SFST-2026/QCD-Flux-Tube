@@ -74,7 +74,7 @@ for mpi in [0, 135, 160, 195, 280, 420, 640]:
           f"{mp.nstr(d1, 6):>24} {mp.nstr(d2, 6):>10}")
 print("=" * 78)
 print("LATTICE DATA for comparison:")
-print("   m_pi~640 MeV (Nf=2, Bali/SESAM):  r_c ~ 1.25(1) fm")
+print("   m_pi~640 MeV (Nf=2, Bali/SESAM):  r_c ~ 1.25 fm")
 print("   chiral Schwinger/Unruh estimate:  r_c = 1.294(40) fm")
 print("   Nf=2 crossover region:            ~0.8-1.1 fm")
 print()
