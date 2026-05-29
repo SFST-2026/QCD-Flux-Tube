@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Reproduce the two manuscript figures exactly:
+Reproduce the two manuscript figures:
   Fig1.pdf : (a) transverse cavity intensity J0^2 ; (b) gluonic-excitation tower
   Fig2.pdf : string-breaking distance d_break(m_pi) with lattice comparison points
 No in-figure titles (Springer guideline); Type-42 embedded fonts.
