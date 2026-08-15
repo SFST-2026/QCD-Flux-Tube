@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this pipeline or the relation it verifies, please cite the manuscript below."
+title: "QCD-Flux-Tube: reproduction pipeline for a parameter-eliminated cross-observable flux-tube test"
+authors:
+  - family-names: "Le Borgne"
+    given-names: "Martin W."
+license: MIT
+repository-code: "https://github.com/SFST-2026/QCD-Flux-Tube"
+preferred-citation:
+  type: article
+  title: "A single transverse scale for the QCD flux tube: a cross-observable test linking string breaking and transverse width"
+  authors:
+    - family-names: "Le Borgne"
+      given-names: "Martin W."
+  journal: "submitted to The European Physical Journal Plus (manuscript EPJP-D-26-03774)"
+  year: 2026
