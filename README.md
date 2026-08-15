@@ -3,8 +3,6 @@ Companion repository for the manuscript
 
 "A single transverse scale for the QCD flux tube: a cross-observable test linking string breaking and transverse width" M. W. Le Borgne, submitted to The European Physical Journal Plus (manuscript EPJP-D-26-03774).
 
-(An earlier version of this repository presented a bounded chiral-limit string-breaking distance of ~1.24 fm from R₀ ≈ 0.81 fm as the lead result. That framing is superseded: the corresponding manuscript revision withdraws it as a novelty claim, and the material below reflects the revised paper.)
-
 The result in one line
 Modelling the flux tube as a cylindrical cavity with one transverse scale R0 and a shared lowest scalar Dirichlet mode, the string-breaking distance and the field-weighted rms width combine into a relation in which the tension normalisation cancels identically and, in the chiral-limit form, the radius, the dimensional closure parameter and every fitted quantity cancel as well:
 
