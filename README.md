@@ -27,7 +27,7 @@ regenerates, deterministically and warning-free:
 Output	Content
 Fig1.pdf	cavity spectrum and rms/R₀ (main-text Fig. 1)
 Fig2.pdf	the parameter-eliminated product P vs P₀ = 2.6707 for the three instantiations (main-text Fig. 2)
-FigS1.pdf	d_break(mπ) curve with the simulated-ensemble lattice points (Supplementary Fig. S1)
+Fig3.pdf	d_break(mπ) curve with the simulated-ensemble lattice points (Supplementary Fig. S1)
 GraphicalAbstract.png/.pdf	480 × 262 px, 11:6
 numerical_results.txt	every quoted number: closed-form constants at 100-digit mpmath precision, the calibration with its covariance ρ-scan, the product relation, the cross-prediction, the width table with per-ensemble scale setting, the two cross-study products (both σt₀ treatments), the Baker combination, the boundary-condition table with the data-side eigenvalue x_q, the Robin-stiffness reading, and the dimensional outputs
 Single source of truth: reproducibility/width_numbers.py (standalone: python3 width_numbers.py).
@@ -37,7 +37,7 @@ Path	Content
 reproducibility/width_numbers.py	authoritative numbers pipeline (100-digit)
 reproducibility/make_all.py	one-command regeneration of all figures + numbers
 reproducibility/numerical_results.txt	committed pipeline output
-Fig1.pdf, Fig2.pdf, FigS1.pdf	manuscript/supplement figures (file names match the printed numbering)
+Fig1.pdf, Fig2.pdf, Fig3.pdf	manuscript/supplement figures (file names match the printed numbering)
 GraphicalAbstract.png, .pdf	graphical abstract
 CITATION.cff, LICENSE, requirements.txt	metadata
 License / citation
