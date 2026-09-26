@@ -1,17 +1,103 @@
-QCD Flux Tube — a parameter-eliminated cross-observable test Companion repository for the manuscript
+# QCD Flux Tube — companion repository
 
-"A single transverse scale for the QCD flux tube: a cross-observable test linking string breaking and transverse width" M. W. Le Borgne, submitted to The European Physical Journal Plus (manuscript EPJP-D-26-03774).
+Companion repository for the manuscript
 
-The result in one line Modelling the flux tube as a cylindrical cavity with one transverse scale R0 and a shared lowest scalar Dirichlet mode, the string-breaking distance and the field-weighted rms width combine into a relation in which the tension normalisation cancels identically and, in the chiral-limit form, the radius, the dimensional closure parameter and every fitted quantity cancel as well:
+> **A single transverse scale for the QCD flux tube: a cross-observable test linking string breaking and transverse width**  
+> Martin W. Le Borgne  
+> Submitted to *The European Physical Journal Plus* (manuscript **EPJP-D-26-03774**)
 
-(d_break·√σ) · √(⟨r⊥²⟩σ) = 2·x_q·g_E = 2·√(x₀,₁² − 4) = 2.6707 (the physical light-quark correction re-introduces only an O(10⁻⁵) dependence on R₀). The relation follows from the core assumptions A1–A3 stated in the paper; the dimensional closure (B1) enters only the equivalent calibration–prediction decomposition, and the quenched-width proxy (B2) only the sharpest empirical instantiation. The full-QCD width rows check that proxy directly (0.943 ± 0.052 vs 0.961 ± 0.027, 0.3σ).
+## Scope
 
-Lattice confrontation (three levels) Instantiation P distance to 2.6707 within-N_f=2+1 cross-study (breaking × full-QCD width; shared σt₀ propagated coherently) 2.58 ± 0.15 ≈ 0.6σ within-N_f=2+1, near-physical-mass robustness combination (six widths, intra-study correlations unavailable) 2.91 ± 0.16 ≈ 1.5σ sharpest (N_f=2+1 breaking × quenched width; explicitly B2-conditional) 2.625 ± 0.079 0.6σ All uncertainties are the quoted lattice statistical/scale errors only (nominal); model systematics of A1–A3 and, for the mixed comparison, B2 are stated in the paper, not folded into these numbers. Lattice inputs are taken from the journal tables of Cea–Cosmai–Cuteri–Papa, PRD 95, 114511 (2017), Bulava et al., PLB 854, 138754 (2024), and Baker et al., EPJC 85, 29 (2025).
+This repository contains the reproducibility code and numerical outputs for the parameter-eliminated cross-observable test developed in the manuscript. The model treats the QCD flux tube as a cylindrical transverse cavity with a shared lowest scalar Dirichlet mode. Under the assumptions stated explicitly in the manuscript, the string-breaking distance and the field-weighted transverse width combine into a relation in which the tension normalization cancels.
 
-Equivalently, string breaking calibrates c = 3.097 ± 0.066 and the width is then predicted with no additional parameter (0.977 ± 0.010 vs the measured 0.961 ± 0.027); both extractions lie close to c = π, recorded as a compact benchmark, not a derived identity.
+The central relation is
 
-Reproducibility pip install -r requirements.txt cd reproducibility python3 make_all.py regenerates, deterministically and warning-free:
+\[
+(d_{\rm break}\sqrt{\sigma})\,\sqrt{\langle r_\perp^2\rangle\sigma}
+=2x_q g_E
+=2\sqrt{x_{0,1}^2-4}
+\simeq 2.6707.
+\]
 
-Output Content Fig1.pdf cavity spectrum and rms/R₀ (main-text Fig. 1) Fig2.pdf the parameter-eliminated product P vs P₀ = 2.6707 for the three instantiations (main-text Fig. 2) Fig3.pdf d_break(mπ) curve with the simulated-ensemble lattice points (Supplementary Fig. S1) GraphicalAbstract.png/.pdf 480 × 262 px, 11:6 numerical_results.txt every quoted number: closed-form constants at 100-digit mpmath precision, the calibration with its covariance ρ-scan, the product relation, the cross-prediction, the width table with per-ensemble scale setting, the two cross-study products (both σt₀ treatments), the Baker combination, the boundary-condition table with the data-side eigenvalue x_q, the Robin-stiffness reading, and the dimensional outputs Single source of truth: reproducibility/width_numbers.py (standalone: python3 width_numbers.py).
+The relation follows from the core assumptions A1–A3 stated in the paper. The dimensional closure assumption B1 enters only the equivalent calibration–prediction decomposition, while the quenched-width proxy B2 is relevant only to the mixed (sharpest) empirical instantiation.
 
-Files Path Content reproducibility/width_numbers.py authoritative numbers pipeline (100-digit) reproducibility/make_all.py one-command regeneration of all figures + numbers reproducibility/numerical_results.txt committed pipeline output Fig1.pdf, Fig2.pdf, Fig3.pdf manuscript/supplement figures (file names match the printed numbering) GraphicalAbstract.png, .pdf graphical abstract CITATION.cff, LICENSE, requirements.txt metadata License / citation Code: MIT (see LICENSE). If you use the pipeline or the relation above, please cite the manuscript (see CITATION.cff; reference to be updated upon publication).
+## Lattice comparison
+
+The manuscript presents the three available instantiations together. They are used as a consistency/falsification check rather than as independent precision confirmations:
+
+| Instantiation | Value of \(P\) | Comparison with \(P_0=2.6707\) |
+|---|---:|---:|
+| \(N_f=2+1\) string breaking × full-QCD width, cross-study | \(2.58\pm0.15\) | about \(0.6\sigma\) |
+| near-physical-mass robustness combination, full-QCD widths | \(2.91\pm0.16\) | about \(1.5\sigma\) |
+| \(N_f=2+1\) string breaking × quenched width (B2-conditional) | \(2.625\pm0.079\) | \(0.6\sigma\) |
+
+The uncertainties shown are the quoted lattice statistical/scale uncertainties as used in the manuscript. Model-systematic limitations associated with A1–A3, and with B2 for the mixed comparison, are discussed in the paper.
+
+The manuscript also reports the full-QCD width comparison used to assess the quenched-width proxy directly.
+
+## Important interpretation limits
+
+The empirical test has three explicit limitations that should be kept in view:
+
+1. **Source separation:** the lattice flux-tube width depends on the quark-source separation, whereas the one-scale cavity model does not predict that dependence or uniquely specify the separation at which the width should be evaluated. The manuscript therefore uses the common \(d=0.76\,\mathrm{fm}\) operational choice required by the available cross-study data.
+2. **Statistical interpretation:** the three lattice determinations are presented primarily as evidence that current data do not falsify the parameter-eliminated relation. The sharpest \(0.6\sigma\) comparison is explicitly conditional on B2 and combines full-QCD string breaking with a quenched width.
+3. **Boundary-condition inference:** the effective value \(x_q=2.36\pm0.07\) is conditional on the phenomenological threshold map A3 and on the assumed \(J_0\) chromoelectric profile. It is not presented as a model-independent lattice determination or selection of the quark boundary condition.
+
+These qualifications are part of the revised manuscript and are intended to prevent the cross-observable comparison from being interpreted as a precision determination of the underlying phenomenological assumptions.
+
+## Reproducibility
+
+The numerical pipeline is deterministic and uses `mpmath` at high precision.
+
+```bash
+pip install -r requirements.txt
+cd reproducibility
+python3 make_all.py
+```
+
+The pipeline regenerates the repository's figures and numerical output, including:
+
+- `Fig1.pdf` — cavity spectrum and transverse rms width;
+- `Fig2.pdf` — parameter-eliminated product for the three lattice instantiations;
+- `Fig3.pdf` — supplementary string-breaking curve;
+- `GraphicalAbstract.png` / `GraphicalAbstract.pdf` — graphical abstract;
+- `numerical_results.txt` — numerical results used in the central analysis.
+
+The authoritative numerical source is:
+
+```text
+reproducibility/width_numbers.py
+```
+
+It can also be run directly:
+
+```bash
+cd reproducibility
+python3 width_numbers.py
+```
+
+## Repository version and manuscript revision
+
+**Manuscript revision:** Rev. 5 (major-revision resubmission, September 2026).
+
+**Reproducibility repository release:** `EPJP-D-26-03774-rev4`.
+
+The repository release is intentionally **not incremented for Rev. 5**. The Rev. 5 manuscript changes are limited to reviewer-response wording, interpretation and clarification; they do not modify the numerical model, equations, input data, reproducibility scripts, or generated numerical results. The existing Rev.-4 repository release therefore remains the applicable reproducibility/code reference for the Rev.-5 manuscript.
+
+## Source data and references
+
+The lattice inputs are taken from the sources cited in the manuscript, including:
+
+- Cea, Cosmai, Cuteri & Papa, *Phys. Rev. D* **95**, 114511 (2017);
+- Bulava et al., *Phys. Lett. B* **854**, 138754 (2024);
+- Baker et al., *Eur. Phys. J. C* **85**, 29 (2025).
+
+All detailed source-data choices, uncertainty propagation, assumptions A1–A3 and B1–B2, and the interpretation of the comparisons are defined in the manuscript.
+
+## Citation
+
+If you use the model, numerical pipeline, or the parameter-eliminated relation, please cite the associated manuscript. The bibliographic record should be updated after publication.
+
+## License
+
+Code and repository metadata are released under the MIT License; see `LICENSE`.
