@@ -1,6 +1,5 @@
-GitHub "About" description (paste into repository settings):
-
-A cross-observable QCD flux-tube test: string breaking and the transverse
-width obey a parameter-eliminated relation, (d·√σ)(w·√σ) = 2√(x₀,₁²−4) =
-2.671 in the chiral limit; the sharpest lattice product gives 2.625 ± 0.079
-(0.6σ, nominal). Full one-command reproduction pipeline.
+GitHub "About" description (as set in the repository settings):
+ 
+Phenomenological QCD flux-tube model and reproducibility code for a
+parameter-eliminated cross-observable test linking string breaking and
+transverse width.
